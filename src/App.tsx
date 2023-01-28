@@ -65,20 +65,20 @@ const Wrapper = styled.div`
     height: 1000px;
 
     @media (max-width: 1024px) {
-      transform: scale(0.8) translateX(200px);
+      transform: scale(0.8);
       transform-origin: top;
     }
     @media (max-width: 800px) {
-      transform: scale(0.7) translateX(600px);
+      transform: scale(0.7);
     }
     @media (max-width: 600px) {
-      transform: scale(0.5) translateX(-100px);
+      transform: scale(0.5);
       right: auto;
       left: 50%;
       margin-left: -600px;
     }
     @media (max-width: 375px) {
-      transform: scale(0.45) translateX(-50px);
+      transform: scale(0.45);
     }
   }
 `;
