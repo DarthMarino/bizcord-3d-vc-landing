@@ -7,12 +7,10 @@ import { useRef } from "react";
 const App = () => {
   return (
     <Wrapper>
-      <div className="container">
-        <Spline
-          className="spline"
-          scene="https://prod.spline.design/SFMgzlOXdCpOvf8m/scene.splinecode"
-        />
-      </div>
+      <Spline
+        className="spline"
+        scene="https://prod.spline.design/SFMgzlOXdCpOvf8m/scene.splinecode"
+      />
       <Content>
         <Menu>
           <li>
@@ -52,47 +50,37 @@ const App = () => {
 export default App;
 
 const Wrapper = styled.div`
+  font-family: "Spline Sans", sans-serif;
   color: white;
   font-size: 16px;
   margin: 0 auto;
   position: relative;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
   overflow-x: hidden;
-  canvas {
-    height: 1000px !important;
-    width: 1200px !important;
-  }
 
-  .container {
+  .spline {
     position: absolute;
     margin: 0;
-    top: 0rem;
-    right: -10rem;
-    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 1200px;
+    height: 1000px;
+
     @media (max-width: 1024px) {
-      transform: scale(0.8);
-      right: -15rem;
+      transform: scale(0.8) translateX(200px);
+      transform-origin: top;
     }
     @media (max-width: 800px) {
       transform: scale(0.7) translateX(600px);
-      right: 3rem;
     }
     @media (max-width: 600px) {
       transform: scale(0.5) translateX(-100px);
-      top: -5rem;
       right: auto;
-      left: 60%;
+      left: 50%;
       margin-left: -600px;
     }
     @media (max-width: 375px) {
-      transform: scale(0.4) translateX(-50px);
-      left: 50%;
-    }
-
-    .spline {
-      overflow: hidden !important;
-      max-height: 700px;
+      transform: scale(0.45) translateX(-50px);
     }
   }
 `;
@@ -103,7 +91,6 @@ const Content = styled.div`
   width: 100%;
   padding-bottom: 100px;
   pointer-events: none;
-
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -169,7 +156,7 @@ const Content = styled.div`
   h1,
   p,
   button {
-    margin: 0 30px 0 100px;
+    margin: 0 30px 0 10rem;
 
     @media (max-width: 1024px) {
       margin: 0 30px;
