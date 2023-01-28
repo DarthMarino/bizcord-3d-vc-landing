@@ -60,11 +60,12 @@ const Wrapper = styled.div`
   .spline {
     position: absolute;
     margin: 0;
-    top: 0;
+    top: -8rem;
     right: 0;
     width: inherit;
     height: inherit;
     @media (max-width: 1024px) {
+      top: -2rem;
       transform: scale(0.8) translateX(200px);
       transform-origin: top;
     }
