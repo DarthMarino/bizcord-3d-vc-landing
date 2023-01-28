@@ -106,14 +106,14 @@ const Content = styled.div`
 
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 
   @media (max-width: 1024px) {
-    gap: 40px;
+    gap: 20px;
   }
 
   h1 {
-    font-size: 70px;
+    font-size: 60px;
     margin: 0;
     max-width: 500px;
     pointer-events: auto;
