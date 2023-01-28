@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import Spline, { SPEObject } from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline";
 import LogoBizcord from "./assets/logo_bizcord.svg";
-import { Application } from "@splinetool/runtime";
-import { useRef } from "react";
 
 const App = () => {
   return (
