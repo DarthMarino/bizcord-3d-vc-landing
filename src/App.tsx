@@ -54,6 +54,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   position: relative;
   height: 100%;
+  width: 100%;
   overflow-x: hidden;
 
   .spline {
@@ -61,24 +62,23 @@ const Wrapper = styled.div`
     margin: 0;
     top: 0;
     right: 0;
-    width: 1200px;
-    height: 1000px;
-
+    width: inherit;
+    height: inherit;
     @media (max-width: 1024px) {
-      transform: scale(0.8);
+      transform: scale(0.8) translateX(200px);
       transform-origin: top;
     }
     @media (max-width: 800px) {
-      transform: scale(0.7);
+      transform: scale(0.7) translateX(300px);
     }
     @media (max-width: 600px) {
-      transform: scale(0.5);
+      transform: scale(0.5) translateX(0px);
       right: auto;
-      left: 50%;
+      left: 70%;
       margin-left: -600px;
     }
     @media (max-width: 375px) {
-      transform: scale(0.45);
+      transform: scale(0.45) translateX(30px);
     }
   }
 `;
